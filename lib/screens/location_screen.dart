@@ -1,14 +1,39 @@
-// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, deprecated_member_use
+// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, deprecated_member_use, prefer_const_constructors_in_immutables
 
 import 'package:flutter/material.dart';
 import 'package:weather_app/utilities/constants.dart';
 
 class LocationScreen extends StatefulWidget {
+  // ignore: prefer_typing_uninitialized_variables
+  final locationdata;
+
+  LocationScreen(this.locationdata);
+
   @override
   _LocationScreenState createState() => _LocationScreenState();
 }
 
 class _LocationScreenState extends State<LocationScreen> {
+  int temperature = 0;
+  int condition = 0;
+  String cityname = "";
+
+  @override
+  void initState() {
+    super.initState();
+
+    updateUI();
+  }
+
+  void updateUI() {
+    double temp = widget.locationdata['main']['temp'];
+    temperature = temp.toInt();
+    condition = widget.locationdata['weather'][0]['id'];
+    cityname = widget.locationdata['name'];
+
+    print(temperature);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,7 +77,7 @@ class _LocationScreenState extends State<LocationScreen> {
                   // ignore: prefer_const_literals_to_create_immutables
                   children: <Widget>[
                     Text(
-                      '32°',
+                      temperature.toString(),
                       style: kTempTextStyle,
                     ),
                     Text(

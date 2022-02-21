@@ -4,13 +4,12 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project was made to understand how API calls and JSON parsing is done and so no attention has been given to user interface or user experience. There are 3 screens:- loading,city selection and weather result based on city selected.
 
-A few resources to get you started if this is your first Flutter project:
+Below are few screenshots of the same:-
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+![loading_screen](https://user-images.githubusercontent.com/57664891/155034412-958c0f41-2d55-4f7e-9061-14af678badad.jpeg)
+![location_1](https://user-images.githubusercontent.com/57664891/155034423-45170940-3e56-493e-8421-59a63a69f6bc.jpeg)
+![city_screen](https://user-images.githubusercontent.com/57664891/155034419-d6cf086d-9dd0-4cd0-887e-f5eeec2d25f4.jpeg)
+![location_2](https://user-images.githubusercontent.com/57664891/155034415-b2eb54bd-ef63-41ff-9f20-8face2b5d376.jpeg)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
